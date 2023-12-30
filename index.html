@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>JS-DRUM-KIT</title>
+  <script src="script.js"></script>
 </head>
 <body>
 <div class="keys">
@@ -56,16 +57,5 @@
 <audio data-key="74" src="sounds/snare.wav"></audio>
 <audio data-key="75" src="sounds/tom.wav"></audio>
 <audio data-key="76" src="sounds/tink.wav"></audio>
-
-
-  <script>
-  window.addEventListener('keydown', function (e) {
-    // console.log(e.keyCode)
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    if (!audio) return;
-    audio.currentTime = 0;
-    audio.play();
-  });
-  </script>
 </body>
 </html>
